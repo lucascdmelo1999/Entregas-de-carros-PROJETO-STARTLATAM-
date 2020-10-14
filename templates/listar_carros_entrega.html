@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw==" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrocarros.css') }}">
+
+
+  
+
+  <title>LISTAR DE ENTREGA DE CARROS</title>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 col-md-7 col-lg-7 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">LISTAR DE ENTREGA DE CARROS</h3>
+            
+              <div class="form-label-group">
+                <table border="2" >
+        
+        <tr><td>
+          Nome do cliente: 
+        </td>
+        <td>
+         Nome do carro:
+        </td>
+        <td>
+          Final chassi:
+        </td>
+        <td>
+          Nome do vendedor: 
+        </td>
+        <td>
+         Data de entrega:
+        </td>
+        <td>
+          Acessorios: 
+        </td>
+         <td>
+         Emplacamento:
+        </td>
+      </tr>
+      
+
+  {% for row in data %} 
+     <tr>
+        <!--Nome do Cliente-->
+        <td >{{row[1]}} </td>
+
+         <!--NOME DO CARRO-->
+        <td  >{{row[2]}}</td>
+
+        <!-- FINAL CHASSI-->
+        <td  >{{row[3]}}</td>
+      
+        <!--NOME VENDEDOR-->
+        <td  >{{row[4]}}</td>
+        
+        <!--DATA DE ENTREGA-->
+        <td  >{{row[5]}}</td>
+      
+        <!--ACESSORIO-->
+        <td  >{{row[6]}}</td>
+        
+       <!--EMPLACAMENTO-->
+        <td  >{{row[7]}}</td>
+        <!--<td> <a type="submit" href="/atualizar" class="btn btn-primary"> Editar</a></td>-->
+      </tr>
+  {% endfor %} 
+  
+    
+
+        
+      
+
+       
+      <!--Status da Entrega
+        <tr><td>
+         Status da Entrega: 
+        </td>
+        <td>
+         Revisando..
+        </td>
+        <td>
+          <a type="submit" href="form_cad_de_carros_update.html" class="btn btn-primary"> Editar</a>
+        </td>
+      </tr>-->
+
+
+
+
+      </table> 
+</div>
+              <a href="/" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Cadastrar MAIS</a>
+
+
+              <!--<div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+      
+      
