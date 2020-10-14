@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha512-kBFfSXuTKZcABVouRYGnUo35KKa1FBrYgwG4PAx7Z2Heroknm0ca2Fm2TosdrrI356EDHMW383S3ISrwKcVPUw==" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrocarros.css') }}">
+
+  <!---------------------------------- JQUERY ------------------------------------------>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <title>CADASTRO DE ENTREGA DE CARROS</title>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">CADASTRO DE ENTREGA DE CARROS</h3>
+            <form  action="/home" method="POST" class="form-signin">
+              <div class="form-label-group">
+                <input type="text" id="inputEmail"   name="nome_cliente" class="form-control" placeholder="josé Firmino" required autofocus>
+                <label for="inputEmail">Nome Cliente</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="cpf" id="inputEmail"  onkeypress="$(this).mask('000.000.000-00')" name="cpf" class="form-control" placeholder="XXX.XXX.XXX-XX" required autofocus>
+                <label for="inputEmail">CPF</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="inputEmail"    name="nome_carro" class="form-control" placeholder="Sportage" required autofocus>
+                <label for="inputEmail">Nome Carro</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="inputEmail"  name="final_chassi" class="form-control" placeholder="5030" required autofocus>
+                <label for="inputEmail">Numeros finais do Chassi</label>
+              </div>
+
+              <div  id="redondo" class="form-label-group">
+                <select  name="nome_vendedor" class="form-control " required autofocus> 
+                      <option value="" disabled selected>Vendedores</option>
+                      <option values="Bruno">Bruno</option>
+                      <option values="Pablo">Pablo</option>
+                </select>
+                
+              </div>
+
+              <div class="form-label-group">
+                <input type="date" id="inputEmail"   name="data_entrega" class="form-control" placeholder="dd/mm/aaaa" required autofocus>
+                <label for="inputEmail">Data de entrega</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="inputEmail"   name="acessorios" class="form-control" placeholder="5030" required autofocus>
+                <label for="inputEmail">Acessorios</label>
+              </div>
+
+              <div id="redondo" class="form-label-group">
+                <select   name="emplacamento" class="form-control " required autofocus> 
+                      <option value="" disabled selected>Emplacamento</option>
+                      <option values="Interno">Interno</option>
+                      <option values="Externo">externo</option>
+                </select>
+                
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Cadastrar</button>
+
+
+              <!--<div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
