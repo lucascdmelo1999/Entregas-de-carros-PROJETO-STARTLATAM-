@@ -63,12 +63,12 @@ def home():
 		
 		con = sqlite3.connect('entregas.db')
 
-		#teste = (cpf, nome_cliente, nome_carro, final_chassi, nome_vendedor, data_entrega, acessorios, emplacamento)
-		con.execute('INSERT INTO cliente(cpf,nome_cliente,nome_carro,final_chassi,nome_vendedor,data_entrega,acessorios,emplacamento) values (?, ?, ?, ?, ?, ?, ?,?)', (cpf,nome_cliente,nome_carro,final_chassi,nome_vendedor,data_entrega,acessorios,emplacamento))
-		#db.session.add(teste)
+		
+		con.execute('INSERT INTO cliente(cpf,nome_cliente,nome_carro,final_chassi,nome_vendedor,data_entrega,acessorios,emplacamento) values (?, ?, ?, ?, ?, ?, ?, ?)', (cpf,nome_cliente,nome_carro,final_chassi,nome_vendedor,data_entrega,acessorios,emplacamento))
+		
 		con.commit()
 		con.close()
-	#db.query.all()
+	
 	return redirect(url_for('lista'))
 
 if __name__ == "__main__":
